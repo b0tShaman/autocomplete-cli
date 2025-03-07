@@ -1,7 +1,7 @@
 # AutoComplete CLI
 
 This is a simple command-line interface (CLI) text editor that provides autocomplete suggestions based on word frequency using a Trie data structure.
-
+![Demo](assets/demo.gif)
 ## Features
 - Real-time autocomplete suggestions based on the words from `words.txt`
 - Suggestions sorted by word frequency
