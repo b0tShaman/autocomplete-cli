@@ -40,7 +40,7 @@ This is a simple command-line interface (CLI) text editor that provides autocomp
 
 ## Usage
 - Start typing any word.
-- Wait for 1 second to see autocomplete suggestions (if any).
+- Wait for 200ms to see autocomplete suggestions (if any).
 - Use `TAB` to navigate suggestions.
 - Press `ENTER` to select a suggestion.
 - Press `Ctrl+C` or `ESC` to exit the application.

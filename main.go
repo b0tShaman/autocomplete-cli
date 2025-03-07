@@ -135,7 +135,7 @@ func main() {
 	// Goroutine to read input
 	go inputReader(inputChan)
 
-	timer := time.NewTimer(1 * time.Second) // timer to trigger autocomplete suggestions
+	timer := time.NewTimer(200 * time.Millisecond) // timer to trigger autocomplete suggestions
 
 	ctx, cancel := context.WithCancel(context.TODO())
 	fmt.Println("START TYPING")
@@ -160,7 +160,7 @@ func main() {
 			}
 
 			// Reset timer on each keypress
-			timer.Reset(1 * time.Second)
+			timer.Reset(200 * time.Millisecond)
 
 			// Key press detected while autocomplete suggestion is displayed66
 			if autoCompleteTriggered {
@@ -211,7 +211,7 @@ func main() {
 
 // Goroutine which sends input + suggestion to render() with a blinking effect
 func recommendation(ctx context.Context, r string, input []rune, inputchan chan string) {
-	ticker := time.NewTicker(500 * time.Millisecond)
+	ticker := time.NewTicker(200 * time.Millisecond)
 	defer ticker.Stop()
 
 	alt := []string{string(input) + r, string(input)}
